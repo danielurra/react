@@ -9,6 +9,7 @@ Be sure you change the following setting to be able to see simple elements like 
 Once the extension is properly configured you can press F12 and go to **Components**, see image below:</br>
 ![5 virtual-DOM-tree](https://github.com/danielurra/react/assets/51704179/89454a93-3bf7-4808-bb06-db5943229d48)</br>
 ## Grab the code
+The following can (and will) be optimized later, by now is good enough for the purpose of showing the virtual DOM components.</br>
 ```html
 <!DOCTYPE html>
 <html>
