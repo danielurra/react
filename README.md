@@ -46,4 +46,52 @@ The following code can (and will) be optimized, by now is good enough for the pu
 </html>
 
 ```
+## Code optimization
+Having hardcoded things doesn't count between the coding best practices, let's see how we can optimize our code.</br>
+Once simple thing that can be is to make use of an **Array** and convert it to a **map**, see code below:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Array to Map</title>
+</head>
+<body>
+
+<div id='toBeRendered'></div>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script>
+
+    const fruArray = [
+        'Banana',
+        'Orange',
+        'Strawberry',
+        'Grapes',
+        'Mango'
+    ]
+    
+    const fruMap = React.createElement(
+        'ul', 
+        null, 
+        fruArray.map((f, i) => React.createElement("li", {key: i}, f))
+    )
+    
+    const favFruits = React.createElement('div', null,
+        React.createElement('h1', null, 'Favorite Fruits'),
+        fruMap
+    )
+    
+    const toBeRendered = ReactDOM.createRoot(document.getElementById('toBeRendered'))
+    toBeRendered.render(favFruits)
+
+</script>
+
+</body>
+</html>
+
+```
+
 
