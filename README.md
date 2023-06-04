@@ -93,5 +93,5 @@ Once simple thing that can be is to make use of an **Array** and convert it to a
 </html>
 
 ```
-
+![6 after-optimization](https://github.com/danielurra/react/assets/51704179/c9621244-26b1-44ee-88b4-62c683937fa4)</br>
 
