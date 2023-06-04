@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Creating Elements</title>
+</head>
+<body>
+
+<div id='toBeRendered'></div>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script>
+
+    const groceries = React.createElement('div', {id: 'groceries'},
+        React.createElement('h1', null, 'Fruits'),
+        React.createElement('ul', null,
+            React.createElement('li', null, 'Banana'),
+            React.createElement('li', null, 'Orange'),
+            React.createElement('li', null, 'Strawberry'),
+            React.createElement('li', null, 'Grapes'),
+            React.createElement('li', null, 'Mango')
+         ),
+        )
+       
+    const toBeRendered = ReactDOM.createRoot(document.getElementById('toBeRendered'))
+    toBeRendered.render(groceries)
+
+</script>
+
+</body>
+</html>
