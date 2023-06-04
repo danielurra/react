@@ -8,4 +8,41 @@ Be sure you change the following setting to be able to see simple elements like 
 ## Open Browser Dev Tools with F12
 Once the extension is properly configured you can press F12 and go to **Components**, see image below:</br>
 ![5 virtual-DOM-tree](https://github.com/danielurra/react/assets/51704179/89454a93-3bf7-4808-bb06-db5943229d48)</br>
+##Grab the code
+```react
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Creating Elements</title>
+</head>
+<body>
+
+<div id='toBeRendered'></div>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script>
+
+    const groceries = React.createElement('div', {id: 'groceries'},
+        React.createElement('h1', null, 'Fruits'),
+        React.createElement('ul', null,
+            React.createElement('li', null, 'Banana'),
+            React.createElement('li', null, 'Orange'),
+            React.createElement('li', null, 'Strawberry'),
+            React.createElement('li', null, 'Grapes'),
+            React.createElement('li', null, 'Mango')
+         ),
+        )
+       
+    const toBeRendered = ReactDOM.createRoot(document.getElementById('toBeRendered'))
+    toBeRendered.render(groceries)
+
+</script>
+
+</body>
+</html>
+
+```
 
