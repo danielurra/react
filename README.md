@@ -1,5 +1,5 @@
 # Visualizing the Virtual DOM
-One nice feature provided by the `"React Developer Tools"` extension of your Google Chrome browser is that it'll allows you to see the virtual DOM</br>
+One nice feature provided by the `"React Developer Tools"` extension of your **Google Chrome browser** is that it'll allows you to see the virtual DOM</br>
 ![google-chrome-react-extension](https://github.com/danielurra/react/assets/51704179/bb9713bc-b024-4169-b52b-339a8c658e87)</br>
 ## Enable access
 Be sure you change the following two settings to be able to see simple elements like div, ul,li</br>
