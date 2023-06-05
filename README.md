@@ -1,5 +1,7 @@
 # What is React?
 React is a JavaScript library for building user interfaces.</br>
+React leverages the **virtual DOM** concept to make building web applications easier and more efficient.</br>
+And the code more manageable and easier to maintain.</br>
 ![reactjs-rectange-01](https://github.com/danielurra/react/assets/51704179/0d922685-c057-4090-8292-2bd5be2c9417)</br>
 # Visualizing the Virtual DOM
 One nice feature provided by the `"React Developer Tools"` extension of your **Google Chrome browser** is that it'll allows you to see the virtual DOM</br>
