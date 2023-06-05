@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Class Components</title>
+</head>
+<body>
+
+<div id='toBeRendered'></div>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script>
+
+    const fruArray = [
+        'Banana',
+        'Orange',
+        'Strawberry',
+        'Grapes',
+        'Mango'
+    ]
+
+    const vegeArray = [
+        'Cucumber',
+        'Letuce',
+        'Broccoli',
+        'Cilantro'
+    ]
+
+    class ListClass extends React.Component {
+        render() {
+            return React.createElement(
+                "ul", 
+                null,
+                this.props.items.map((item, i) => React.createElement("li", {key: i}, item))
+            )
+        }
+    }
+
+    class TopLevel extends React.Component {
+        render() {
+            return React.createElement('div', null,
+                React.createElement('h1', null, 'Favorite Fruits'),
+                React.createElement(ListClass, {items: fruArray}, null),
+                React.createElement('h1', null, 'Favorite Vegetables'),
+                React.createElement(ListClass, {items: vegeArray}, null)
+            )
+        }
+    }
+
+    const toplevel = React.createElement(TopLevel, null, null)
+
+	const toBeRendered = ReactDOM.createRoot(document.getElementById('toBeRendered'))
+    toBeRendered.render(toplevel)
+
+</script>
+
+</body>
+</html>
