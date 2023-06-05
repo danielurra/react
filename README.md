@@ -95,9 +95,74 @@ Once simple thing that can be is to make use of an **Array** and convert it to a
 ```
 ![6 after-optimization](https://github.com/danielurra/react/assets/51704179/c9621244-26b1-44ee-88b4-62c683937fa4)</br>
 ## Define your own component as a class
-React has a built-in class that has common capabilities needed by all components, that class is named: `React.Component`<\br>
+React has a built-in class that has common capabilities needed by all components, that class is named `React.Component`.</br>
 We can extends that class (inheritance) to create our own components<\br>
 Making use of classes we can take advantage and save line of code by just using different instances of the same class, see below:<\br>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Class Components</title>
+</head>
+<body>
+
+<div id='toBeRendered'></div>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script>
+
+    const fruArray = [
+        'Banana',
+        'Orange',
+        'Strawberry',
+        'Grapes',
+        'Mango'
+    ]
+
+    const vegeArray = [
+        'Cucumber',
+        'Letuce',
+        'Broccoli',
+        'Cilantro'
+    ]
+
+    class ListClass extends React.Component {
+        render() {
+            return React.createElement(
+                "ul", 
+                null,
+                this.props.items.map((item, i) => React.createElement("li", {key: i}, item))
+            )
+        }
+    }
+
+    class TopLevel extends React.Component {
+        render() {
+            return React.createElement('div', null,
+                React.createElement('h1', null, 'Favorite Fruits'),
+                React.createElement(ListClass, {items: fruArray}, null),
+                React.createElement('h1', null, 'Favorite Vegetables'),
+                React.createElement(ListClass, {items: vegeArray}, null)
+            )
+        }
+    }
+
+    const toplevel = React.createElement(TopLevel, null, null)
+
+	const toBeRendered = ReactDOM.createRoot(document.getElementById('toBeRendered'))
+    toBeRendered.render(toplevel)
+
+</script>
+
+</body>
+</html>
+```
+## Two instances of the class are being used on our example
+![react-component-class](https://github.com/danielurra/react/assets/51704179/a0410ff0-bffd-4f1e-8d74-714a14909be2)
+
 
 
 
