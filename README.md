@@ -97,7 +97,7 @@ Once simple thing that can be is to make use of an **Array** and convert it to a
 ## Define your own component as a class
 React has a built-in class that has common capabilities needed by all components, that class is named `React.Component`.</br>
 We can extends that class (inheritance) to create our own components.</br>
-Making use of classes we can take advantage and save line of code by just using different instances of the same class, see below:</br>
+Making use of classes we can take advantage and save lines of code by just using different instances of the same class, see below:</br>
 ```html
 <!DOCTYPE html>
 <html>
