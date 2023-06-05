@@ -6,7 +6,7 @@ One nice feature provided by the `"React Developer Tools"` extension of your **G
 Be sure you change the following setting to be able to see simple elements like `div,ul,li`</br>
 ![4 do-not-hide-components](https://github.com/danielurra/react/assets/51704179/ed6beaae-ae54-4198-90d4-69351ba1a4da)</br>
 ## Open Browser Dev Tools with F12
-Once the extension is properly configured you can press F12 and go to **Components**, see image below:</br>
+Once the extension is properly configured you can press `F12` and go to **Components**, see image below:</br>
 ![5 virtual-DOM-tree](https://github.com/danielurra/react/assets/51704179/89454a93-3bf7-4808-bb06-db5943229d48)</br>
 ## Grab the code
 The following code can (and will) be optimized, by now is good enough for the purpose of showing the virtual DOM components.</br>
